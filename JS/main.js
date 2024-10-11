@@ -77,6 +77,7 @@ let productCard = document.getElementById("product-card")
 function mostrarProductos(arrayProductos) {
     arrayProductos.forEach(producto => {
         const cards = document.createElement("div")
+        cards.className = "cards-productos"
         cards.innerHTML = `<img src="https://tienda.personal.com.ar/images/320/webp/Iphone13pro_Graphite_min_4a8b32a8ff.png" alt="${producto.nombre}">
                             <h3>${producto.nombre}</h3>
                             <span>$${producto.precio}</span>

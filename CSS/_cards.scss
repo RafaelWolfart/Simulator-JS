@@ -1,0 +1,13 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+    gap: 8px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 0;
+}
+
+.cards-productos {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+}
