@@ -77,7 +77,7 @@ let productCard = document.getElementById("product-card")
 function mostrarProductos(arrayProductos) {
     arrayProductos.forEach(producto => {
         const cards = document.createElement("div")
-        cards.innerHTML = `<img src="img/${producto.id}.jpg" alt="${producto.nombre}">
+        cards.innerHTML = `<img src="../img/download.jpeg" alt="${producto.nombre}">
                             <h3>${producto.nombre}</h3>
                             <span>$${producto.precio}</span>
                             <button class="add-cart" id="${producto.id}">Agregar al carrito</button>`
@@ -95,7 +95,6 @@ function agregarAlCarrito() {
             const productoId = e.currentTarget.id
             const selectedProduct = productos.find(producto => producto.id == productoId)
             carrito.push(selectedProduct)
-            console.log(carrito)
             localStorage.setItem("carrito", JSON.stringify(carrito))
         }
     })

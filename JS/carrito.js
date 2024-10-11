@@ -16,17 +16,20 @@ function mostrarCarrito(itemCarrito) {
 mostrarCarrito(carritoCargado)
 
 // eliminar item del carrito
-function eliminarItem() {
-    const botonesEliminar = document.querySelectorAll(".eliminar-item")
-    botonesEliminar.forEach(boton => {
-        boton.onclick = (e) => {
-            const productoId = e.currentTarget.id
-            const index = carritoCargado.findIndex(producto => producto.id == productoId)
-            carritoCargado.splice(index, 1)
-            localStorage.setItem("carrito", JSON.stringify(carritoCargado))
-            location.reload()
-            console.log(carritoCargado)
-        }
-    })
-}
 
+const eliminarItem = document.querySelectorAll(".eliminar-item")
+eliminarItem.forEach(boton => {
+    boton.onclick = (e) => {
+        const itemId = e.currentTarget.id
+        carritoCargado = carritoCargado.filter(item => item.id != itemId)
+        localStorage.setItem("carrito", JSON.stringify(carritoCargado))
+        location.reload()
+    }
+})
+
+// total del carrito
+
+const totalCompra = carritoCargado.reduce((acc, item) => acc + item.precio, 0)
+const mostrarTotal = document.createElement("div")
+mostrarTotal.innerHTML = `<h3>Total: $${totalCompra}</h3>`
+carritoCompra.appendChild(mostrarTotal)
