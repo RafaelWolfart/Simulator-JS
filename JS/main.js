@@ -81,7 +81,7 @@ function mostrarProductos(arrayProductos) {
         cards.innerHTML = `<img src="https://tienda.personal.com.ar/images/320/webp/Iphone13pro_Graphite_min_4a8b32a8ff.png" alt="${producto.nombre}">
                             <h3>${producto.nombre}</h3>
                             <span>$${producto.precio}</span>
-                            <button class="add-cart" id="${producto.id}">Agregar al carrito</button>`
+                            <button class="add-cart" id="${producto.id}">Comprar</button>`
         productCard.appendChild(cards)
     })
     agregarAlCarrito()

@@ -1,1 +1,1 @@
-# Simulator-JS
+# Simulador tienda de iPhoneAR
