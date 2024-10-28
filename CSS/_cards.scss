@@ -8,19 +8,29 @@
 }
 
 .cards-productos {
+    display: flex;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .1);
     margin: 5px;
     padding: 10px;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
     img {
         object-fit: cover;
     }
 
     button {
+        display: inline;
+        border-color: transparent;
         border-radius: 100px;
         background-color: #0071e3;
         color: #fff;
         padding: 5px;
+        align-self: self-end;
+    }
+
+    .precio {
+        font-weight: 300;
     }
 }
