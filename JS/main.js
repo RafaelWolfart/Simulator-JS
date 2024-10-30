@@ -95,6 +95,11 @@ function agregarAlCarrito() {
         boton.onclick = (e) => {
             const productoId = e.currentTarget.id
             const selectedProduct = productos.find(producto => producto.id == productoId)
+            if (carrito){
+                carrito = JSON.parse(localStorage.getItem("carrito"))
+            } else {
+                carrito = []
+            }
             carrito.push(selectedProduct)
             localStorage.setItem("carrito", JSON.stringify(carrito))
         }
