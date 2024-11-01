@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nombre": "iPhone 13",
+    "precio": 500
+  },
+  {
+    "id": 2,
+    "nombre": "iPhone 13 Pro",
+    "precio": 600
+  },
+  {
+    "id": 3,
+    "nombre": "iPhone 13 Pro Max",
+    "precio": 700
+  },
+  {
+    "id": 4,
+    "nombre": "iPhone 14",
+    "precio": 800
+  },
+  {
+    "id": 5,
+    "nombre": "iPhone 14 Pro",
+    "precio": 900
+  },
+  {
+    "id": 6,
+    "nombre": "iPhone 14 Pro Max",
+    "precio": 1000
+  },
+  {
+    "id": 7,
+    "nombre": "iPhone 15",
+    "precio": 1100
+  },
+  {
+    "id": 8,
+    "nombre": "iPhone 15 Pro",
+    "precio": 1200
+  },
+  {
+    "id": 9,
+    "nombre": "iPhone 15 Pro Max",
+    "precio": 1300
+  },
+  {
+    "id": 10,
+    "nombre": "iPhone 16",
+    "precio": 1400
+  }
+]
