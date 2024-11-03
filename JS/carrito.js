@@ -4,11 +4,11 @@ let carritoCargado = localStorage.getItem("carrito")
 carritoCargado = JSON.parse(carritoCargado)
 
 function mostrarCarrito(itemCarrito) {
-    itemCarrito.forEach(producto => {
+    itemCarrito.forEach(product => {
         const cardCompra = document.createElement("div")
-        cardCompra.innerHTML = `<h3>${producto.nombre}</h3>
-                                <p>$${producto.precio}</p>
-                                <button class="eliminar-item" id="${producto.id}">Eliminar</button>`
+        cardCompra.innerHTML = `<h3>${product.nombre}</h3>
+                                <p>$${product.precio}</p>
+                                <button class="eliminar-item" id="${product.id}">Eliminar</button>`
         carritoCompra.appendChild(cardCompra)
     })
 }
@@ -31,5 +31,7 @@ eliminarItem.forEach(boton => {
 
 const totalCompra = carritoCargado.reduce((acc, item) => acc + item.precio, 0)
 const mostrarTotal = document.createElement("div")
-mostrarTotal.innerHTML = `<h3>Total: $${totalCompra}</h3>`
+mostrarTotal.innerHTML = `<h3>Total: $${totalCompra}</h3>
+                        <button class="compra-final">Finalizar compra</button>
+                        `
 carritoCompra.appendChild(mostrarTotal)
