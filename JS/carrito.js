@@ -6,7 +6,8 @@ carritoCargado = JSON.parse(carritoCargado)
 function mostrarCarrito(itemCarrito) {
     itemCarrito.forEach(product => {
         const cardCompra = document.createElement("div")
-        cardCompra.innerHTML = `<h3>${product.nombre}</h3>
+        cardCompra.innerHTML = `<img src="${product.imagen}" alt="${product.nombre}">
+                                <h3>${product.nombre}</h3>
                                 <p>$${product.precio}</p>
                                 <button class="eliminar-item" id="${product.id}">Eliminar</button>`
         carritoCompra.appendChild(cardCompra)
