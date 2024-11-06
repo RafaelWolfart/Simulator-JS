@@ -1,6 +1,6 @@
 let carritoCompra = document.getElementById("carrito-content")
 
-let carritoCargado = localStorage.getItem("carrito")
+let carritoCargado = localStorage.getItem("carrito") || "[]"
 carritoCargado = JSON.parse(carritoCargado)
 
 function mostrarCarrito(itemCarrito) {
