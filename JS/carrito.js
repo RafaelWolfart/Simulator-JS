@@ -39,7 +39,6 @@ carritoCompra.appendChild(mostrarTotal)
 
 const finalCompra = document.getElementById("compra-final")
 .addEventListener("click", () => {
-    window.location.href = "../formulario.html"
+    window.location.href = "../pages/formulario.html"
     localStorage.removeItem("carrito")
-    location.reload()
 })
