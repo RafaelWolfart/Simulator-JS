@@ -33,6 +33,13 @@ eliminarItem.forEach(boton => {
 const totalCompra = carritoCargado.reduce((acc, item) => acc + item.precio, 0)
 const mostrarTotal = document.createElement("div")
 mostrarTotal.innerHTML = `<h3>Total: $${totalCompra}</h3>
-                        <button class="compra-final">Finalizar compra</button>
+                        <button class="compra-final" id="compra-final">Finalizar compra</button>
                         `
 carritoCompra.appendChild(mostrarTotal)
+
+const finalCompra = document.getElementById("compra-final")
+.addEventListener("click", () => {
+    window.location.href = "../formulario.html"
+    localStorage.removeItem("carrito")
+    location.reload()
+})
