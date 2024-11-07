@@ -39,6 +39,11 @@ carritoCompra.appendChild(mostrarTotal)
 
 const finalCompra = document.getElementById("compra-final")
 .addEventListener("click", () => {
+    if (carritoCargado.length === 0) {
+        alert("El carrito esta vacio")
+        return
+    }
+    
     window.location.href = "../pages/formulario.html"
     localStorage.removeItem("carrito")
 })
