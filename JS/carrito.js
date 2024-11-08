@@ -6,7 +6,8 @@ carritoCargado = JSON.parse(carritoCargado)
 function mostrarCarrito(itemCarrito) {
     itemCarrito.forEach(product => {
         const cardCompra = document.createElement("div")
-        cardCompra.innerHTML = `<img src="${product.imagen}" alt="${product.nombre}">
+        cardCompra.className = "cards-compras"
+        cardCompra.innerHTML = `<img class="img-compra" src="${product.imagen}" alt="${product.nombre}">
                                 <h3>${product.nombre}</h3>
                                 <p>$${product.precio}</p>
                                 <button class="eliminar-item" id="${product.id}">Eliminar</button>`
@@ -32,6 +33,7 @@ eliminarItem.forEach(boton => {
 
 const totalCompra = carritoCargado.reduce((acc, item) => acc + item.precio, 0)
 const mostrarTotal = document.createElement("div")
+mostrarTotal.className = "total-compra"
 mostrarTotal.innerHTML = `<h3>Total: $${totalCompra}</h3>
                         <button class="compra-final" id="compra-final">Finalizar compra</button>
                         `
@@ -40,7 +42,7 @@ carritoCompra.appendChild(mostrarTotal)
 const finalCompra = document.getElementById("compra-final")
 .addEventListener("click", () => {
     if (carritoCargado.length === 0) {
-        alert("El carrito esta vacio")
+        alert("El carrito esta vacío")
         return
     }
     

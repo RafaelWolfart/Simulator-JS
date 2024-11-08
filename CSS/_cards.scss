@@ -18,6 +18,7 @@
 
     img {
         object-fit: cover;
+        max-height: 372px;
     }
 
     button {
@@ -32,5 +33,19 @@
 
     .precio {
         font-weight: 300;
+    }
+}
+
+.cards-compras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    background-color: #efefefef;
+
+    .img-compra {
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
     }
 }

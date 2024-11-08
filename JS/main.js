@@ -11,7 +11,7 @@ fetch("./DB/dataIphone.json")
         products.forEach(product => {
             const cards = document.createElement("div")
             cards.className = "cards-productos"
-            cards.innerHTML = `<img src="${product.imagen}" alt="${product.nombre}">
+            cards.innerHTML = `<img class="img-producto" src="${product.imagen}" alt="${product.nombre}">
                                 <h3>${product.nombre}</h3>
                                 <span class="precio">$${product.precio}</span>
                                 <button class="add-cart" id="${product.id}">Comprar</button>`

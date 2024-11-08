@@ -35,6 +35,7 @@ body {
 }
 .cards-productos img {
   object-fit: cover;
+  max-height: 372px;
 }
 .cards-productos button {
   display: inline;
@@ -47,6 +48,19 @@ body {
 }
 .cards-productos .precio {
   font-weight: 300;
+}
+
+.cards-compras {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+  background-color: rgba(239, 239, 239, 0.937254902);
+}
+.cards-compras .img-compra {
+  height: 150px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
