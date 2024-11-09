@@ -73,6 +73,19 @@ body {
   border-color: transparent;
 }
 
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
 .compra-final {
   border-radius: 100px;
   background-color: #0071e3;
