@@ -18,6 +18,7 @@ fetch("./DB/dataIphone.json")
             productCard.appendChild(cards)
         })
         agregarAlCarrito()
+        
     })
     .catch(err => console.error("Error al cargar los productos:", err))
 
@@ -30,11 +31,28 @@ function agregarAlCarrito() {
             const selectedProduct = products.find(product => product.id == productId)
             if (carrito){
                 carrito = JSON.parse(localStorage.getItem("carrito")) || []
+
             } else {
                 carrito = []
+
             }
             carrito.push(selectedProduct)
             localStorage.setItem("carrito", JSON.stringify(carrito))
+            Toastify({
+                text: "Producto agregado al carrito",
+                duration: 1500,
+                destination: "pages/carrito.html",
+                newWindow: true,
+                close: false,
+                gravity: "top",
+                position: "center",
+                stopOnFocus: true,
+                style: {
+                  background: "linear-gradient(to right, #e5e5e7, #f5f5f7 )",
+                  color: "black",
+                  borderRadius: "10px"
+                },
+              }).showToast();
         }
     })
 }

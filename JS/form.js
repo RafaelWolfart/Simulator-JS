@@ -67,7 +67,21 @@ document.getElementById("formCompra").addEventListener("submit", function(event)
     }
 
     if (isValid) {
-        alert("Compra realizada con éxito.");
+        Toastify({
+            text: "Compra realizada exitosamente!",
+            duration: 1500,
+            destination: "../index.html",
+            newWindow: true,
+            close: false,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+              background: "linear-gradient(to right, #e5e5e7, #f5f5f7 )",
+              color: "black",
+              borderRadius: "10px"
+            },
+          }).showToast();
 
         document.getElementById("formCompra").reset();
     }

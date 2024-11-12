@@ -25,7 +25,24 @@ eliminarItem.forEach(boton => {
         const itemId = e.currentTarget.id
         carritoCargado = carritoCargado.filter(item => item.id != itemId)
         localStorage.setItem("carrito", JSON.stringify(carritoCargado))
-        location.reload()
+        Toastify({
+            text: "Producto eliminado del carrito",
+            duration: 1500,
+            destination: "pages/carrito.html",
+            newWindow: true,
+            close: false,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+                background: "linear-gradient(to right, #e5e5e7, #f5f5f7)",
+                color: "black",
+                borderRadius: "10px"
+            },
+            }).showToast();
+        setTimeout(() => {
+                location.reload()
+        }, 1000)
     }
 })
 
@@ -42,7 +59,21 @@ carritoCompra.appendChild(mostrarTotal)
 const finalCompra = document.getElementById("compra-final")
 .addEventListener("click", () => {
     if (carritoCargado.length === 0) {
-        alert("El carrito esta vacío")
+        Toastify({
+            text: "Tu carrito aún está vacío. Ve a la tienda",
+            duration: 1500,
+            destination: "../index.html",
+            newWindow: true,
+            close: false,
+            gravity: "top",
+            position: "center",
+            stopOnFocus: true,
+            style: {
+              background: "linear-gradient(to right, #e5e5e7, #f5f5f7 )",
+              color: "black",
+              borderRadius: "10px"
+            },
+          }).showToast();
         return
     }
     
