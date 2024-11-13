@@ -2,69 +2,69 @@ document.getElementById("form-compra").addEventListener("submit", function(event
     event.preventDefault()
 
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const direccion = document.getElementById("direccion").value.trim();
-    const tarjeta = document.getElementById("tarjeta").value.trim();
-    const expiracion = document.getElementById("expiracion").value;
-    const cvv = document.getElementById("cvv").value.trim();
+    const nombre = document.getElementById("nombre").value.trim()
+    const email = document.getElementById("email").value.trim()
+    const direccion = document.getElementById("direccion").value.trim()
+    const tarjeta = document.getElementById("tarjeta").value.trim()
+    const expiracion = document.getElementById("expiracion").value
+    const cvv = document.getElementById("cvv").value.trim()
 
-    const errorNombre = document.getElementById("errorNombre");
-    const errorEmail = document.getElementById("errorEmail");
-    const errorDireccion = document.getElementById("errorDireccion");
-    const errorTarjeta = document.getElementById("errorTarjeta");
-    const errorExpiracion = document.getElementById("errorExpiracion");
-    const errorCVV = document.getElementById("errorCVV");
+    const errorNombre = document.getElementById("errorNombre")
+    const errorEmail = document.getElementById("errorEmail")
+    const errorDireccion = document.getElementById("errorDireccion")
+    const errorTarjeta = document.getElementById("errorTarjeta")
+    const errorExpiracion = document.getElementById("errorExpiracion")
+    const errorCVV = document.getElementById("errorCVV")
 
-    let isValid = true;
+    let isValid = true
 
     if (nombre.length < 3) {
-        errorNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
-        isValid = false;
+        errorNombre.textContent = "El nombre debe tener al menos 3 caracteres."
+        isValid = false
     } else {
-        errorNombre.textContent = "";
+        errorNombre.textContent = ""
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
-        errorEmail.textContent = "Ingresa un correo electrónico válido.";
-        isValid = false;
+        errorEmail.textContent = "Ingresa un correo electrónico válido."
+        isValid = false
     } else {
-        errorEmail.textContent = "";
+        errorEmail.textContent = ""
         
     }
 
 
     if (direccion.length < 5) {
-        errorDireccion.textContent = "La dirección debe tener al menos 5 caracteres.";
-        isValid = false;
+        errorDireccion.textContent = "La dirección debe tener al menos 5 caracteres."
+        isValid = false
     } else {
-        errorDireccion.textContent = "";
+        errorDireccion.textContent = ""
     }
 
-    const tarjetaRegex = /^\d{16}$/;
+    const tarjetaRegex = /^\d{16}$/
     if (!tarjetaRegex.test(tarjeta)) {
-        errorTarjeta.textContent = "La tarjeta debe tener 16 dígitos.";
-        isValid = false;
+        errorTarjeta.textContent = "La tarjeta debe tener 16 dígitos."
+        isValid = false
     } else {
-        errorTarjeta.textContent = "";
+        errorTarjeta.textContent = ""
     }
 
-    const fechaActual = new Date();
-    const fechaExpiracion = new Date(expiracion);
+    const fechaActual = new Date()
+    const fechaExpiracion = new Date(expiracion)
     if (fechaExpiracion < fechaActual) {
-        errorExpiracion.textContent = "La tarjeta ha expirado.";
-        isValid = false;
+        errorExpiracion.textContent = "La tarjeta ha expirado."
+        isValid = false
     } else {
-        errorExpiracion.textContent = "";
+        errorExpiracion.textContent = ""
     }
 
-    const cvvRegex = /^\d{3}$/;
+    const cvvRegex = /^\d{3}$/
     if (!cvvRegex.test(cvv)) {
-        errorCVV.textContent = "El CVV debe tener 3 dígitos.";
-        isValid = false;
+        errorCVV.textContent = "El CVV debe tener 3 dígitos."
+        isValid = false
     } else {
-        errorCVV.textContent = "";
+        errorCVV.textContent = ""
     }
 
     if (isValid) {
@@ -82,8 +82,12 @@ document.getElementById("form-compra").addEventListener("submit", function(event
                 color: "black",
                 borderRadius: "10px"
             },
-            }).showToast();
+            }).showToast()
 
-        document.getElementById("form-compra").reset();
+        document.getElementById("form-compra").reset()
+
+        setTimeout(function() {
+            window.location.href = "../index.html"
+        }, 2000)
     }
 });

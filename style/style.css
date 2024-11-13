@@ -80,13 +80,14 @@ footer {
 }
 
 .form-compra {
-  max-width: 400px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 8px;
   text-align: center;
 }
 .form-compra .inputs {
+  width: 500px;
   border-radius: 10px;
   margin: 20px;
   padding: 10px;
@@ -99,7 +100,7 @@ footer {
   margin: 10px;
 }
 .form-compra .input-corto {
-  max-width: 100px;
+  max-width: 150px;
 }
 
 .error {

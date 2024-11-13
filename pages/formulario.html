@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon"
+        href="../img/png-transparent-apple-logo-iphone-computer-apple-logo-company-heart-logo-thumbnail.ico"
+        type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="../style/style.css">
     <script defer src="../JS/form.js"></script>
     <title>Finalizar compra</title>
@@ -21,25 +25,25 @@
     <div class="flex-container">
 
         <form id="form-compra" class="form-compra">
-            <h2>Formulario de Compra</h2>
+            <h2>Formulario de compra</h2>
 
-            <label for="nombre">Nombre Completo:</label>
+            <label for="nombre">Nombre completo:</label>
             <input class="inputs" type="text" id="nombre" name="nombre" required>
             <span class="error" id="errorNombre"></span>
 
-            <label for="email">Correo Electrónico:</label>
+            <label for="email">Correo electrónico:</label>
             <input class="inputs" type="email" id="email" name="email" required>
             <span class="error" id="errorEmail"></span>
 
-            <label for="direccion">Dirección de Envío:</label>
+            <label for="direccion">Dirección de envío:</label>
             <input class="inputs" type="text" id="direccion" name="direccion" required>
             <span class="error" id="errorDireccion"></span>
 
-            <label for="tarjeta">Número de Tarjeta de Crédito:</label>
+            <label for="tarjeta">Número de tarjeta de crédito/débito:</label>
             <input class="inputs" type="text" id="tarjeta" name="tarjeta" maxlength="16" required>
             <span class="error" id="errorTarjeta"></span>
 
-            <label for="expiracion">Fecha de Expiración:</label>
+            <label for="expiracion">Fecha de expiración:</label>
             <input class="inputs input-corto" type="month" id="expiracion" name="expiracion" required>
             <span class="error" id="errorExpiracion"></span>
 
@@ -51,6 +55,7 @@
         </form>
     </div>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
