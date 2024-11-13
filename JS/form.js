@@ -1,4 +1,4 @@
-document.getElementById("formCompra").addEventListener("submit", function(event) {
+document.getElementById("form-compra").addEventListener("submit", function(event) {
     event.preventDefault()
 
 
@@ -31,6 +31,7 @@ document.getElementById("formCompra").addEventListener("submit", function(event)
         isValid = false;
     } else {
         errorEmail.textContent = "";
+        
     }
 
 
@@ -77,12 +78,12 @@ document.getElementById("formCompra").addEventListener("submit", function(event)
             position: "center",
             stopOnFocus: true,
             style: {
-              background: "linear-gradient(to right, #e5e5e7, #f5f5f7 )",
-              color: "black",
-              borderRadius: "10px"
+                background: "linear-gradient(to right, #e5e5e7, #f5f5f7 )",
+                color: "black",
+                borderRadius: "10px"
             },
-          }).showToast();
+            }).showToast();
 
-        document.getElementById("formCompra").reset();
+        document.getElementById("form-compra").reset();
     }
 });

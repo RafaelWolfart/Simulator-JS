@@ -62,7 +62,7 @@ body {
 .cards-compras .img-compra {
   height: 100%;
   width: 20%;
-  object-fit: cover;
+  object-fit: contain;
 }
 .cards-compras .eliminar-item {
   margin: 15px;
@@ -79,17 +79,40 @@ footer {
   padding: 20px 0;
 }
 
+.form-compra {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+.form-compra .inputs {
+  border-radius: 10px;
+  margin: 20px;
+  padding: 10px;
+}
+.form-compra .fin-compra {
+  background: #0071e3;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.form-compra .input-corto {
+  max-width: 100px;
+}
+
 .error {
-  color: red;
+  color: #ff2e3f;
   font-size: 0.9em;
 }
 
 input:invalid {
-  border-color: red;
+  border-color: #ff2e3f;
 }
 
 input:valid {
-  border-color: green;
+  border-color: #4eff2e;
 }
 
 .compra-final {
@@ -135,6 +158,11 @@ input:valid {
   border: 2px solid #000000;
   background: transparent;
   color: #fff;
+}
+
+.descripcion {
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
