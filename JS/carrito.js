@@ -23,7 +23,10 @@ const eliminarItem = document.querySelectorAll(".eliminar-item")
 eliminarItem.forEach(boton => {
     boton.onclick = (e) => {
         const itemId = e.currentTarget.id
-        carritoCargado = carritoCargado.filter(item => item.id != itemId)
+        const itemIndex = carritoCargado.findIndex(item => item.id == itemId)
+            if (itemIndex !== -1) {
+                carritoCargado.splice(itemIndex, 1)
+            }
         localStorage.setItem("carrito", JSON.stringify(carritoCargado))
         Toastify({
             text: "Producto eliminado del carrito",
